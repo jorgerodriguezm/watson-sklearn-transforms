@@ -1,5 +1,5 @@
 from sklearn.base import BaseEstimator, TransformerMixin
-import pandas as pd
+from pandas import *
 
 # All sklearn Transforms must have the `transform` and `fit` methods
 class Bienvenida(BaseEstimator, TransformerMixin):
@@ -29,7 +29,7 @@ class Labeling(BaseEstimator, TransformerMixin):
         # Primero realizamos la cópia del DataFrame 'X' de entrada
         data = X.copy()
         # Retornamos um nuevo dataframe sin las colunmas indeseadas
-        df_encoded = pd.get_dummies(data, columns=self.columnas)
+        df_encoded = pandas.get_dummies(data, columns=self.columnas)
         return df_encoded
     
 
