@@ -1,5 +1,4 @@
 from sklearn.base import BaseEstimator, TransformerMixin
-from pandas import *
 
 # All sklearn Transforms must have the `transform` and `fit` methods
 class Bienvenida(BaseEstimator, TransformerMixin):
@@ -14,9 +13,8 @@ class Bienvenida(BaseEstimator, TransformerMixin):
         dfcop = df.copy()
         return dfcop
 
-#Transformar para One-Hot Encoding para Variables Categóricas
+#One-Hot Encoding para Variables Categóricas
 class Labeling(BaseEstimator, TransformerMixin):
-    import pandas as pd
     toEncode=["SEX","EXISTING_SAVINGS","CHECKING_BALANCE","JOB_TYPE",'CREDIT_HISTORY','LOAN_PURPOSE','OTHERS_ON_LOAN','PROPERTY',
           'INSTALLMENT_PLANS','HOUSING']
     def __init__(self):
