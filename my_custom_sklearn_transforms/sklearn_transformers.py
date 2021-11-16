@@ -30,7 +30,7 @@ class Labeling(BaseEstimator, TransformerMixin):
         data = X
         # Retornamos One-Hot Encoding
         df_encoded = pan.get_dummies(data, columns=self.toEncode)
-        return df_encoded.sort_index(axis=1).to_numpy()
+        return df_encoded.sort_index(axis=1)
     
 
 # Un transformador para remover columnas indeseadas
