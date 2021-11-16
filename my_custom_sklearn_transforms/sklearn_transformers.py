@@ -21,7 +21,7 @@ class Labeling(BaseEstimator, TransformerMixin):
         pass
         
 
-    def fit(self, df, y=None):
+    def fit(self, X, y=None):
         return self
 
     def transform(self, X):
