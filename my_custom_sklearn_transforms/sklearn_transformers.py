@@ -11,7 +11,7 @@ class Bienvenida(BaseEstimator, TransformerMixin):
 
     def transform(self,df):
         # Copia del Dataframe enviado
-        dfcop = df.copy()
+        dfcop = df
         return dfcop
 
 #One-Hot Encoding para Variables Categóricas
