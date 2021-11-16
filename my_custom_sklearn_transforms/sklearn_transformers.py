@@ -18,8 +18,8 @@ class Bienvenida(BaseEstimator, TransformerMixin):
 class Labeling(BaseEstimator, TransformerMixin):
     toEncode=["SEX","EXISTING_SAVINGS","CHECKING_BALANCE","JOB_TYPE",'CREDIT_HISTORY','LOAN_PURPOSE','OTHERS_ON_LOAN','PROPERTY',
           'INSTALLMENT_PLANS','HOUSING']
-    def __init__(self, columnas):
-        self.columnas = columnas
+    def __init__(self):
+        pass
         
 
     def fit(self, df, y=None):
@@ -29,7 +29,7 @@ class Labeling(BaseEstimator, TransformerMixin):
         # Primero realizamos la cópia del DataFrame 'X' de entrada
         data = X.copy()
         # Retornamos um nuevo dataframe sin las colunmas indeseadas
-        df_encoded = pd.get_dummies(data, columns=self.columnas)
+        df_encoded = pd.get_dummies(data, columns=toEncode)
         return df_encoded
     
 
