@@ -37,7 +37,7 @@ class Labeling(BaseEstimator, TransformerMixin):
 class DropColumns(BaseEstimator, TransformerMixin):    
     columns=["ID","TELEPHONE","ALLOW"]
     def __init__(self):
-        return self
+        pass
 
     def fit(self, X, y=None):
         return X
