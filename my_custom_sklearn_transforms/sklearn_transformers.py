@@ -1,5 +1,5 @@
 from sklearn.base import BaseEstimator, TransformerMixin
-from pandas import * as pd
+from pandas import *
 
 # All sklearn Transforms must have the `transform` and `fit` methods
 class Bienvenida(BaseEstimator, TransformerMixin):
