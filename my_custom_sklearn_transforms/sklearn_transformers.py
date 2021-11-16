@@ -27,7 +27,7 @@ class Labeling(BaseEstimator, TransformerMixin):
 
     def transform(self, X):
         # Primero realizamos la cópia del DataFrame 'X' de entrada
-        data = X.copy()
+        data = X
         # Retornamos One-Hot Encoding
         df_encoded = pan.get_dummies(data, columns=self.toEncode)
         return df_encoded
@@ -44,7 +44,7 @@ class DropColumns(BaseEstimator, TransformerMixin):
 
     def transform(self, X):
         # Primero realizamos la cópia del DataFrame 'X' de entrada
-        data = X.copy()
+        data = X
         # Retornamos um nuevo dataframe sin las colunmas indeseadas
         return data.drop(labels=self.columns, axis='columns')    
     
