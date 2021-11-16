@@ -36,8 +36,8 @@ class Labeling(BaseEstimator, TransformerMixin):
 # Un transformador para remover columnas indeseadas
 class DropColumns(BaseEstimator, TransformerMixin):    
     columns=["ID","TELEPHONE","ALLOW"]
-    def __init__(self, columns):
-        self.columns = columns
+    def __init__(self):
+        return self
 
     def fit(self, X, y=None):
         return X
