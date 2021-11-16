@@ -29,7 +29,7 @@ class Labeling(BaseEstimator, TransformerMixin):
         # Primero realizamos la cópia del DataFrame 'X' de entrada
         data = X.copy()
         # Retornamos um nuevo dataframe sin las colunmas indeseadas
-        df_encoded = pd.get_dummies(data, columns=toEncode)
+        df_encoded = pandas.get_dummies(data, columns=toEncode)
         return df_encoded
     
 
